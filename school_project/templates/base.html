@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}School Manager{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'students/css/site.css' %}">
+</head>
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a class="brand" href="{% url 'home' %}">School Manager</a>
+            <nav class="site-nav" aria-label="Navigation principale">
+            <a href="{% url 'home' %}">Accueil</a>
+            <a href="{% url 'student_list' %}">Étudiants</a>
+            <a href="{% url 'teacher_list' %}">Enseignants</a>
+            <a href="{% url 'about' %}">À propos</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-shell">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        School Manager - Projet Django
+    </footer>
+</body>
+</html>

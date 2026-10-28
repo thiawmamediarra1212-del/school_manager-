@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Accueil - School Manager{% endblock %}
+
+{% block content %}
+    <h1>Bienvenue dans School Manager</h1>
+    <p>Gestion des étudiants de notre établissement.</p>
+    <p>
+        <a href="{% url 'student_list' %}">
+            Voir la liste des étudiants
+        </a>
+    </p>
+{% endblock %}
